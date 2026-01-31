@@ -1,0 +1,884 @@
+@font-face {
+    font-family: Chillax;
+    src: url(./Chillax-Regular.ttf);
+}
+
+@font-face {
+    font-family: satoshi;
+    src: url(./Satoshi-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto-Mono.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+@mixin flexcon() {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    @include flexcon();
+    align-items: center;
+
+    .view1 {
+        width: 100%;
+        @include flexcon();
+        color: white;
+        gap: 2rem;
+        padding: 0.8rem;
+        max-width: 1900px;
+
+        .top {
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            @include flexcon();
+            background-color: rgb(31, 31, 31);
+            padding: 2rem 1.5rem;
+            gap: 4rem;
+            border-radius: 0.7rem;
+
+            .p {
+                width: 90%;
+                color: white;
+                font-family: "Roboto";
+                font-size: 1rem;
+                letter-spacing: 0.02rem;
+                opacity: 0.9;
+                text-transform: uppercase;
+            }
+
+            .text {
+                @include flexcon();
+                gap: 1rem;
+
+                h1 {
+                    color: white;
+                    font-family: "Chillax";
+                    font-size: 2.5rem;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                }
+
+                p {
+                    width: 90%;
+                    font-family: satoshi;
+                    color: white;
+                    line-height: 1.5;
+                    font-size: 1.3rem;
+                    opacity: 0.5;
+                }
+
+                button {
+                    font-family: "Roboto";
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: 0.03rem;
+                    font-size: 1rem;
+                    opacity: 0.9;
+                    background: none;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.7rem;
+
+                    i {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 40px;
+                        width: 40px;
+                        background-color: rgb(52, 51, 51);
+                        border-radius: 50%;
+                        border: 1px solid #f4f2ed64;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .num {
+        @include flexcon();
+        width: 100%;
+        color: white;
+        gap: 1rem;
+        padding: 1.5rem 1.5rem;
+        max-width: 1900px;
+
+        .top {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+
+        .bottom {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            font-family: "Roboto";
+            color: white;
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 0.02rem;
+            padding-left: 0.4rem;
+            font-weight: 100;
+        }
+
+        h1 {
+            font-family: "Chillax";
+            color: white;
+            font-weight: 100;
+            font-size: 2.2rem;
+            line-height: 1.5;
+        }
+    }
+
+    .view2,
+    .view3 {
+        width: 100%;
+        @include flexcon();
+        color: white;
+        gap: 1rem;
+        padding: 0.8rem;
+        max-width: 1900px;
+
+        .top {
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            background-color: rgb(28, 28, 28);
+            padding: 2rem 1.5rem;
+            @include flexcon();
+            gap: 4rem;
+            border-radius: 0.7rem;
+
+            .p {
+                color: white;
+                font-family: "Roboto";
+                font-size: 0.8rem;
+                letter-spacing: 0.02rem;
+                opacity: 0.9;
+                text-transform: uppercase;
+            }
+
+            .text {
+                @include flexcon();
+                gap: 1rem;
+
+                h1 {
+                    color: white;
+                    font-family: "Chillax";
+                    font-size: 2rem;
+                    font-weight: 80;
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                }
+
+                p {
+                    width: 90%;
+                    font-family: "satoshi";
+                    color: white;
+                    line-height: 1.5;
+                    font-size: 1.1rem;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    .view4 {
+        @include flexcon();
+        width: 100%;
+        color: white;
+        gap: 1rem;
+        padding: 1rem 1.3rem;
+        border-radius: 0.7rem;
+        max-width: 1900px;
+
+        .top {
+            h1 {
+                color: white;
+                font-family: "Chillax";
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: 100;
+                line-height: 1.2;
+            }
+        }
+
+
+        .card {
+            @include flexcon();
+            width: 100%;
+            gap: 1rem;
+
+            .card1,
+            .card2,
+            .card3 {
+                @include flexcon();
+                justify-content: space-between;
+                padding: 1rem 1.3rem;
+                width: 100%;
+                aspect-ratio: 1/1;
+                background-size: cover;
+                border-radius: 0.7rem;
+                align-items: center;
+                padding: 1rem;
+
+                .icon {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 0.9rem;
+                    padding: 1rem 0.8rem;
+
+                    i {
+                        height: 40px;
+                        width: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.2rem;
+                        opacity: 0.6;
+                        border: 1px solid rgba(212, 200, 200, 0.936);
+                        border-radius: 50%;
+                        background-color: transparent;
+
+                    }
+                }
+
+
+
+                .footer {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 1.2rem 1rem;
+                    align-items: center;
+                    justify-content: space-between;
+                    backdrop-filter: blur(3rem);
+                    border-radius: 0.6rem;
+                    border: 1px solid rgba(255, 255, 255, 0.196);
+                    background: rgba(255, 255, 255, 0.048);
+                    gap: 0.5rem;
+
+                    h1 {
+                        color: white;
+                        font-family: "Chillax";
+                        font-size: 1.3rem;
+                        font-weight: 40;
+                        text-transform: uppercase;
+                    }
+
+
+                    h2 {
+                        color: white;
+                        font-family: "Roboto";
+                        font-size: 0.8rem;
+                        font-weight: 50;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .card1 {
+                background-image: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd7d003dfb6a1bdecb_team-01.webp");
+
+            }
+
+            .card2 {
+                background-image: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd2e12fa747e999689_team-02.webp");
+
+            }
+
+            .card3 {
+                background-image: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbdc1f945f817bf4fd7_team-03.webp");
+
+            }
+        }
+    }
+
+    .view5 {
+        width: 100%;
+        @include flexcon();
+        color: white;
+        gap: 1rem;
+        padding: 0.8rem;
+        max-width: 1900px;
+
+        .top {
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            background-color: rgb(28, 28, 28);
+            padding: 2rem 1.8rem;
+            @include flexcon();
+            gap: 0.5rem;
+            border-radius: 0.7rem;
+
+            .p {
+                color: white;
+                font-family: "Roboto";
+                font-size: 0.8rem;
+                letter-spacing: 0.02rem;
+                opacity: 0.6;
+                text-transform: uppercase;
+            }
+
+            .text {
+                @include flexcon();
+                gap: 3.5rem;
+                justify-content: space-between;
+
+
+                p {
+                    color: white;
+                    font-family: "Chillax";
+                    font-size: 2rem;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                    opacity: 0.9;
+                }
+
+                button {
+                    font-family: "Roboto";
+                    color: white;
+                    text-transform: uppercase;
+                    letter-spacing: 0.03rem;
+                    font-size: 0.8rem;
+                    opacity: 0.9;
+                    background: none;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.7rem;
+
+                    i {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 40px;
+                        width: 40px;
+                        background-color: rgb(52, 51, 51);
+                        border-radius: 50%;
+                        border: 1px solid #f4f2ed64;
+                        font-size: 18px;
+                        rotate: 225deg;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .contact {
+        width: 100%;
+        @include flexcon();
+        gap: 0.5rem;
+        padding: 1rem;
+        border-radius: 0.7rem;
+        max-width: 1900px;
+
+        div {
+            border-radius: 0.7rem;
+            background-color: #cebd63;
+            padding: 1.5rem 2rem;
+            @include flexcon();
+            gap: 1rem;
+
+            .text {
+                padding: 0;
+                @include flexcon();
+                justify-content: space-between;
+                gap: 1rem;
+
+                .p {
+                    font-family: "Roboto";
+                    color: black;
+                    text-transform: uppercase;
+                    letter-spacing: 0.02rem;
+                    font-size: 0.9rem;
+                    opacity: 0.9;
+                }
+
+                h2 {
+                    color: black;
+                    font-family: "Chillax";
+                    font-size: 2.4rem;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    line-height: 1;
+                    text-align: left;
+                }
+
+
+            }
+
+
+            button {
+                width: 100%;
+                background-color: rgb(29, 29, 29);
+                color: antiquewhite;
+                font-family: "Roboto";
+                padding: 1rem;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                letter-spacing: 0.03rem;
+                border-radius: 0.7rem;
+            }
+
+
+
+        }
+    }
+
+    footer {
+        width: 100%;
+        @include flexcon();
+        gap: 1rem;
+        padding: 0.7rem 1rem;
+        border-radius: 0.7rem;
+        max-width: 1900px;
+
+
+
+        .first {
+            width: 100%;
+            @include flexcon();
+            gap: 4rem;
+            justify-content: space-between;
+            background-color: rgb(28, 28, 28);
+            color: white;
+            padding: 1rem 1.7rem;
+            border-radius: 0.7rem;
+
+            p {
+                text-transform: uppercase;
+                font-family: "Chillax";
+                font-size: 1.1rem;
+                opacity: 0.8;
+            }
+
+            .icon2 {
+                width: 100%;
+                @include flexcon();
+                flex-direction: row;
+                gap: 0.7rem;
+
+                i {
+                    height: 30px;
+                    width: 30px;
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgba(255, 255, 255, 0.555);
+                    border-radius: 50%;
+                    background-color: transparent;
+                    background-color: rgb(49, 48, 48);
+
+                }
+            }
+        }
+
+        .second {
+            width: 100%;
+            color: white;
+            background-color: rgb(28, 28, 28);
+            @include flexcon();
+            gap: 4rem;
+            border-radius: 0.7rem;
+            padding: 1rem 1.7rem;
+            text-transform: uppercase;
+            justify-content: space-between;
+
+            ul {
+                h1 {
+                    width: 100%;
+                    font-family: "Chillax";
+                    @include flexcon();
+                    opacity: 1;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    margin-bottom: 0.5rem;
+                }
+
+                li {
+                    width: 100%;
+                    @include flexcon();
+                    font-family: "Roboto";
+                    list-style: none;
+                    opacity: 0.6;
+                    font-size: 0.9rem;
+                    letter-spacing: 0.02rem;
+                    margin-top: 1.8rem;
+                }
+
+                .b {
+                    width: 44%;
+                    padding: 0.6rem 1rem;
+                    border-radius: 0.6rem;
+                    background-color: #e4ff1b;
+                    color: black;
+                    text-transform: uppercase;
+                    text-align: left;
+                    opacity: 1;
+                    line-height: 1.5;
+                    letter-spacing: 0.02rem;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        .third {
+            width: 100%;
+            @include flexcon();
+            background-color: rgb(28, 28, 28);
+            color: white;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0.7rem;
+            gap: 1.2rem;
+            padding: 1rem;
+
+            p {
+                color: white;
+                padding: 0 1rem;
+                text-transform: uppercase;
+                font-size: 0.7rem;
+                font-family: "Roboto";
+                opacity: 0.7;
+            }
+
+            button {
+                color: white;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-family: "Roboto";
+                opacity: 0.7;
+                border: none;
+                background: none;
+                cursor: pointer;
+                gap: 0.4rem;
+            }
+
+            i {
+                width: 30px;
+                height: 30px;
+                color: rgb(255, 255, 255);
+                font-size: 0.9rem;
+                border: solid 1px rgb(221, 217, 217);
+                border-radius: 50%;
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 1400px) {
+    main {
+
+        .view1 {
+            flex-direction: row;
+            padding: 1rem 3.5rem;
+
+            .bottom,
+            .top {
+                width: 50%;
+            }
+
+            .bottom {
+                padding: 3.5rem;
+                justify-content: space-between;
+
+                .p {
+                    font-size: 0.8rem;
+                }
+
+                .text {
+                    gap: 0.6rem;
+
+                    h1 {
+                        font-size: 3.6rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+
+                    button {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+        }
+
+        .num {
+
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 1rem;
+            padding: 3rem;
+
+            .top,
+            .bottom {
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+
+            h2 {
+                font-size: 0.7rem;
+                padding-left: 0.9rem;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+                font-weight: 90;
+            }
+
+
+        }
+
+        .view2 {
+            flex-direction: row-reverse;
+            padding: 1rem 3rem;
+
+            .bottom,
+            .top {
+                width: 50%;
+            }
+
+            .bottom {
+                padding: 3rem;
+                justify-content: space-between;
+
+                .p {
+                    font-size: 0.8rem;
+                }
+
+                .text {
+                    gap: 0.6rem;
+
+                    h1 {
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+
+        .view3 {
+            flex-direction: row;
+            padding: 1rem 3rem;
+
+            .bottom,
+            .top {
+                width: 50%;
+            }
+
+            .bottom {
+                padding: 3rem;
+                justify-content: space-between;
+
+                .p {
+                    font-size: 0.8rem;
+                }
+
+                .text {
+                    gap: 0.6rem;
+
+                    h1 {
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+
+
+                }
+            }
+        }
+
+        .view4 {
+            .card {
+                padding: 1rem 2.2rem;
+                flex-direction: row;
+            }
+        }
+
+        .view5 {
+            flex-direction: row;
+            padding: 1rem 3rem;
+
+            .bottom,
+            .top {
+                width: 50%;
+            }
+
+            .bottom {
+                padding: 3.5rem;
+
+                .p {
+                    font-size: 0.8rem;
+                }
+
+                .text {
+                    gap: 10rem;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: 3rem;
+                    }
+
+                    button {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            padding: 1rem 3rem;
+
+            div {
+                flex-direction: row;
+                align-items: end;
+                padding: 2.5rem 3rem;
+
+                .text {
+                    align-items: flex-start;
+
+                    h2 {
+                        width: 70%;
+                        font-size: 4rem;
+                        line-height: 1;
+                    }
+                }
+
+                button {
+                    width: 10%;
+                    padding: 0.9rem 0.3;
+                    font-size: 0.6rem;
+
+                }
+
+
+            }
+
+        }
+
+        footer {
+            padding: 1rem 3rem;
+            display: grid;
+            grid-template-rows: 7fr 1.5fr;
+            grid-template-columns: 1fr 4fr;
+            grid-template-areas: "first second"
+                "first third";
+
+            .first {
+                padding: 1.5rem 1.5rem;
+                grid-area: first;
+
+                .icon2 {
+                    i {
+                        height: 40px;
+                        width: 40px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .second {
+                flex-direction: row;
+                grid-area: second;
+                padding: 2rem 18rem 5rem 2rem;
+
+                ul {
+                    h1 {
+                        font-size: 1.3rem;
+                    }
+
+                    li {
+                        font-size: 0.8rem;
+                        margin-top: 1.6rem
+                    }
+
+                    .b {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .third {
+                grid-area: third;
+                flex-direction: row;
+                padding: 1rem;
+            }
+        }
+
+    }
+}

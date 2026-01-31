@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+@mixin flexcon(){
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    @include flexcon();
+    align-items: center;
+
+
+
+    .card{
+        width: 100%;
+
+
+        img{
+            width: 100%;
+            border-radius: 0.7rem;
+        }
+
+
+        .top{
+            width: 100%;
+            display: flex;
+            align-items: top;
+            // justify-content: t;
+            color: white;
+            
+        }
+        .centre{
+             width: 100%;
+            display: flex;
+            align-items: center;
+         justify-content: end;
+            color: white;
+
+        }
+
+        .footer{
+             width: 100%;
+            display: flex;
+            align-items: center;
+         justify-content: space-between;
+            color: white;
+
+        }
+        
+    }
+
+}
